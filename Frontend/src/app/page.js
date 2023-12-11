@@ -19,7 +19,7 @@ export default function Home() {
   const onSubmit = async (data) => {
     const config = {
       method: "post",
-      url: `http://localhost:4000/api/geolocator/location/${data.address}`,
+      url: `https://geolocatorbackend.onrender.com/api/geolocator/location/${data.address}`,
       headers: {},
     };
     await axios(config)
@@ -35,7 +35,7 @@ export default function Home() {
   const onSendEmail = async (data) => {
     const config = {
       method: "post",
-      url: `http://localhost:4000/api/geolocator/sendEmail`,
+      url: `https://geolocatorbackend.onrender.com/api/geolocator/sendEmail`,
       params: {
         id: "65760172b0ac00237f82ba30",
         email: emailRef.current.value,
